@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.moedas.databinding.ActivityMainBinding
 import com.example.moedas.domain.models.Moedas
 import com.example.moedas.presentation.viewmodels.MainViewModel
+import com.example.moedas.utils.Extensoes.realFormat2CasasDec
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
             if (moedas != null) {
                 allMoedas = moedas
                 binding.textMoedaInfo.text = allMoedas.dolarEmBr.nome
-                binding.textValorMoeda.text = allMoedas.dolarEmBr.valor
+                binding.editTextNoBr.hint = "1${allMoedas.dolarEmBr.codigo}"
+                binding.editTextBr.hint = allMoedas.dolarEmBr.valor.realFormat2CasasDec()
             }
 
         }
@@ -51,17 +52,20 @@ class MainActivity : AppCompatActivity() {
                 if (position == 0 && (::allMoedas.isInitialized)) {
 
                         binding.textMoedaInfo.text = allMoedas.dolarEmBr.nome
-                        binding.textValorMoeda.text = allMoedas.dolarEmBr.valor
+                        binding.editTextNoBr.hint = "1${allMoedas.dolarEmBr.codigo}"
+                        binding.editTextBr.hint = allMoedas.dolarEmBr.valor.realFormat2CasasDec()
 
                 } else if (position == 1 && (::allMoedas.isInitialized)) {
 
                     binding.textMoedaInfo.text = allMoedas.euroEmBr.nome
-                    binding.textValorMoeda.text = allMoedas.euroEmBr.valor
+                    binding.editTextNoBr.hint = "1${allMoedas.euroEmBr.codigo}"
+                    binding.editTextBr.hint = allMoedas.euroEmBr.valor.realFormat2CasasDec()
 
                 } else if (position == 2 && (::allMoedas.isInitialized)) {
 
                     binding.textMoedaInfo.text = allMoedas.bitcoinEmBr.nome
-                    binding.textValorMoeda.text = allMoedas.bitcoinEmBr.valor
+                    binding.editTextNoBr.hint = "1${allMoedas.bitcoinEmBr.codigo}"
+                    binding.editTextBr.hint = allMoedas.bitcoinEmBr.valor.realFormat2CasasDec()
 
                 }
             }
