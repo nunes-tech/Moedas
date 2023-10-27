@@ -13,3 +13,6 @@ Nesse projeto, meu foco foi usar as principais tecnologias em conjunto com boas 
 
 ##Api
 https://docs.awesomeapi.com.br/
+
+##Versionamento
+*Git
