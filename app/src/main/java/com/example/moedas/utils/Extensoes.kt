@@ -2,9 +2,9 @@ package com.example.moedas.utils
 
 object Extensoes {
 
-    fun String.realFormat2CasasDec() : String{
+    fun String.format2DecimalPlaces() : String{
         if (this.length > 4) {
-            return String.format("R$%.2f", this.toDouble())
+            return String.format("%.2f", this.toDouble())
         }
         return this
     }

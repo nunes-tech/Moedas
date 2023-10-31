@@ -59,7 +59,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextNoBr"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:textColorHint="#4CAF50"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -75,7 +78,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextBr"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            android:textColorHint="#4CAF50"
+            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
