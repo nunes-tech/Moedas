@@ -6,3 +6,7 @@ data class Euro(
     val codigoPara: String,
     val nome: String
 )
+
+fun Euro.toMoeda() : Moeda{
+    return Moeda(this.valor, this.codigo, this.codigoPara, this.nome)
+}
