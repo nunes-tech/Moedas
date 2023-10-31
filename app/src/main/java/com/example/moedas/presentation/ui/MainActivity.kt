@@ -118,7 +118,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun configurarSpnner(){
         val opcoes = arrayOf( "Dolar", "Euro", "Bitcoin" )
 
