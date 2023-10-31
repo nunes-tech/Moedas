@@ -46,26 +46,26 @@ class MainActivity : AppCompatActivity() {
     private fun setEventsChangeListiner() {
         binding.editTextNoBr.addTextChangedListener(
             object : TextWatcher {
-                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {  }
+                override fun beforeTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {  }
 
-                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    verificarValorDigitado(p0, "real")
+                override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    verificarValorDigitado(s, "real")
                 }
 
-                override fun afterTextChanged(p0: Editable?) {  }
+                override fun afterTextChanged(s: Editable?) {  }
 
             }
         )
 
         binding.editTextBr.addTextChangedListener(
             object : TextWatcher {
-                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {  }
+                override fun beforeTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {  }
 
-                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    verificarValorDigitado(p0, "outra")
+                override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    verificarValorDigitado(s, "outra")
                 }
 
-                override fun afterTextChanged(p0: Editable?) {  }
+                override fun afterTextChanged(s: Editable?) {  }
 
             }
         )
